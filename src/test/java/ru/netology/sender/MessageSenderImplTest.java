@@ -19,7 +19,7 @@ class MessageSenderImplTest {
     void messageSenderRussiaTest() {
         String ip = "172.";
         String expected = "Добро пожаловать ";
-        GeoService geoService = Mockito.mock(GeoServiceImpl.class);
+        GeoService geoService = Mockito.mock(GeoService.class);
         Mockito.when(geoService.byIp(ip)).thenReturn(new Location("Moscow", Country.RUSSIA, null, 0));
         LocalizationService localizationService = Mockito.mock(LocalizationService.class);
         Mockito.when(localizationService.locale(Country.RUSSIA)).thenReturn("Добро пожаловать ");
@@ -34,7 +34,7 @@ class MessageSenderImplTest {
     void messageSenderUSATest() {
         String ip = "96.";
         String expected = "Welcome";
-        GeoService geoService = Mockito.mock(GeoServiceImpl.class);
+        GeoService geoService = Mockito.mock(GeoService.class);
         Mockito.when(geoService.byIp(ip)).thenReturn(new Location("New York", Country.USA, null, 0));
         LocalizationService localizationService = Mockito.mock(LocalizationService.class);
         Mockito.when(localizationService.locale(Country.USA)).thenReturn("Welcome");

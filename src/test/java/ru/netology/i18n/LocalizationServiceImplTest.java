@@ -8,7 +8,7 @@ class LocalizationServiceImplTest {
 
     @Test
     void test_local_USA() {
-        LocalizationServiceImpl localizationService = new LocalizationServiceImpl();
+        LocalizationService localizationService = new LocalizationServiceImpl();
         Country testCountry = Country.USA;
         String expectedWelcome = "Welcome";
         String resultWelcome = localizationService.locale(testCountry);
@@ -17,7 +17,7 @@ class LocalizationServiceImplTest {
 
     @Test
     void test_local_RUSSIA() {
-        LocalizationServiceImpl localizationService = new LocalizationServiceImpl();
+        LocalizationService localizationService = new LocalizationServiceImpl();
         Country testCountry = Country.RUSSIA;
         String expectedWelcome = "Добро пожаловать";
         String resultWelcome = localizationService.locale(testCountry);
