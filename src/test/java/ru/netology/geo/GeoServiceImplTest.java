@@ -8,10 +8,10 @@ import ru.netology.entity.Location;
 class GeoServiceImplTest {
     @Test
     void NULL_byIp_Test() {
-        GeoService geoServiceImpl = new GeoServiceImpl();
+        GeoService geoService = new GeoServiceImpl();
         String ipTest = "0.0.0.0";
         Location expectedLocation = null;
-        Location resultLocation = geoServiceImpl.byIp(ipTest);
+        Location resultLocation = geoService.byIp(ipTest);
         Assertions.assertEquals(expectedLocation, resultLocation);
     }
     @Test
